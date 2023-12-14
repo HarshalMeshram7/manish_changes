@@ -27,16 +27,16 @@ class Conf
 
     public function __construct()
     {
-        $this->dbHost = 'localhost';
-        $this->dbPort = '3307';
+        $this->dbHost = 'mysql-pixonix.mysql.database.azure.com';
+        $this->dbPort = '3306';
         if (defined('ENVIRONMENT') && ENVIRONMENT == 'test') {
             $prefix = defined('TEST_DB_PREFIX') ? TEST_DB_PREFIX : '';
             $this->dbName = $prefix . 'test_orangehrm';
         } else {
-            $this->dbName = 'hrmsphp';
+            $this->dbName = 'orangehrm';
         }
-        $this->dbUser = 'root';
-        $this->dbPass = 'mysql@8988';
+        $this->dbUser = 'azadmin';
+        $this->dbPass = 'Sql@112762';
     }
 
     /**
